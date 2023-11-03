@@ -1,0 +1,23 @@
+{{>layouts/header}}
+
+<table class="container table table-dark table-striped">
+    <thead>
+    <tr>
+        <th scope="col" style="color: white">ID</th>
+        <th scope="col" style="color: white">TITLE</th>
+        <th scope="col" style="color: white">CONTENT</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#articleList}}
+        <tr>
+            <td style="color: white">{{id}}</td>
+            <td style="color: white"><a href="/articles/{{id}}">{{title}}</a></td>
+            <td style="color: white">{{content}}</td>
+        </tr>
+    {{/articleList}}
+    </tbody>
+</table>
+<button type="button" name="write"><a href="/articles/new">작성하기</a></button>
+
+{{>layouts/footer}}
